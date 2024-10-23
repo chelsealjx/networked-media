@@ -1,0 +1,68 @@
+<html>
+
+<head>
+    <title>PETS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pages.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+
+<body>
+    <%- include("nav.ejs", {}) %>
+        <div class="image-container">
+            <div class="page-one">
+                <h1>🐈PETS</h1>
+            </div>
+            <div class="pageblock">
+                <img src="images/24.JPG" data-info="Stop fighting...">
+            </div>
+            <div class="pageblock">
+                <img src="images/61.jpg" data-info="This is Lucky">
+            </div>
+            <div class="pageblock">
+                <img src="images/65.jpeg" data-info="and this is Kiki">
+            </div>
+            <div class="pageblock">
+                <img src="images/57.JPG" data-info="They are twins!">
+            </div>
+            <div class="pageblock">
+                <img src="images/58.jpeg" data-info="Studying with me">
+            </div>
+            <div class="pageblock">
+                <img src="images/60.jpeg" data-info="Lucky sleep in the sun!">
+            </div>
+            <div class="pageblock">
+                <img src="images/59.jpeg" data-info="Hi! is Lucky again">
+            </div>
+            <div class="pageblock">
+                <img src="images/63.jpg" data-info="and Yolk (friend's cat #1)">
+            </div>
+            <div class="pageblock">
+                <img src="images/62.jpg" data-info="It's Kiki's turn!">
+            </div>
+            <div class="pageblock">
+                <img src="images/64.jpg" data-info="Then Nuts(friend's cat #2)">
+            </div>
+            <div class="pageblock">
+                <img src="images/66.jpeg" data-info="Finally Lucky!">
+            </div>
+            <div class="information">
+            </div>
+
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const images = document.querySelectorAll('.pageblock img');
+                const infoBlock = document.querySelector('.information');
+
+                images.forEach(image => {
+                    image.addEventListener('click', function () {
+                        // Update the information block with the data attribute
+                        infoBlock.textContent = image.getAttribute('data-info');
+                    });
+                });
+            });
+        </script>
+</body>
+
+</html>

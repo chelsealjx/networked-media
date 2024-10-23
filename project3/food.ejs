@@ -1,0 +1,71 @@
+<html>
+
+<head>
+    <title>FOOD</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pages.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+
+<body>
+    <%- include("nav.ejs", {}) %>
+        <div class="image-container">
+            <div class="page-one">
+                <h1>🍜FOOD</h1>
+            </div>
+            <div class="pageblock">
+                <img src="images/1.JPG" data-info="12/21/2023-Pranakhon Thai Restaurant-Post food history final lunch!">
+            </div>
+            <div class="pageblock">
+                <img src="images/10.JPG" data-info="11/23/2023-Boiling Point@Bellevue-Reunited with highschool friends">
+            </div>
+            <div class="pageblock">
+                <img src="images/43.JPG" data-info="05/01/2024-Gentile Gelato-Icecream date with Sunny before finals">
+            </div>
+            <div class="pageblock">
+                <img src="images/16.jpg" data-info="10/14/2024-Lan Larb Chiangmai-With friends visiting NYC">
+            </div>
+            <div class="pageblock">
+                <img src="images/44.jpg"
+                    data-info="06/21/2024-Yodelin-Best dinning place in Leavenworth(according to me)">
+            </div>
+            <div class="pageblock">
+                <img src="images/45.jpeg" data-info="08/10/2024-Nana's Green Tea Bellevue-Yuzu softserve is soo good!">
+            </div>
+            <div class="pageblock">
+                <img src="images/46.jpeg" data-info="08/11/2024-Home-Mom trying to cook everything I want to eat!">
+            </div>
+            <div class="pageblock">
+                <img src="images/47.jpeg"
+                    data-info="08/21/2024-Tianfu Bellevue-Dishs for people who can not eat that spicy...">
+            </div>
+            <div class="pageblock">
+                <img src="images/48.jpeg"
+                    data-info="08/30/2024-Tendon Kohaku-Waiting for the line to get short all summer and finally...">
+            </div>
+            <div class="pageblock">
+                <img src="images/49.JPG" data-info="03/01/2024-Little Rubys-Early birthday brunch with Sunny">
+            </div>
+            <div class="pageblock">
+                <img src="images/50.jpeg" data-info="10/12/2024-Five Senses-Welcome to NYC!">
+            </div>
+            <div class="information">
+            </div>
+
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const images = document.querySelectorAll('.pageblock img');
+                const infoBlock = document.querySelector('.information');
+
+                images.forEach(image => {
+                    image.addEventListener('click', function () {
+                        // Update the information block with the data attribute
+                        infoBlock.textContent = image.getAttribute('data-info');
+                    });
+                });
+            });
+        </script>
+</body>
+
+</html>

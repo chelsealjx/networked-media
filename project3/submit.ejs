@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <title>SUBMIT</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pages.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+
+<body>
+    <%- include("nav.ejs", {}) %>
+        <div class="image-container">
+            <div class="page-one">
+                <h1>📨SUBMIT</h1>
+            </div>
+            <div class="information">
+                <form method="POST" action="/submit" enctype="multipart/form-data">
+                    <input type="text" name="caption" placeholder="About the event">
+                    <div class="controls-container">
+                        <input type="file" name="myImage">
+                        <button class="submit" type="submit">Submit</button>
+                        <button class="delete" type="submit" formAction="/delete">Delete All Posts</button>
+                    </div>
+                </form>
+            </div>
+            <% posts.forEach((singlePost)=> { %>
+                <div class="pageblock-submit">
+                    <div class="date">
+                        <%= singlePost.date %>
+                    </div>
+                    <div class="caption">
+                        <%= singlePost.cap %>
+                    </div>
+                    <% if (singlePost.image) { %>
+                        <div class="image">
+                            <img src="/upload/<%= singlePost.image %>" style="max-width: 170px;">
+                        </div>
+                        <% } %>
+                </div>
+                <% }) %>
+        </div>
+</body>
+
+</html>

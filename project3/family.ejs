@@ -1,0 +1,68 @@
+<html>
+
+<head>
+    <title>FAMILY</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pages.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+
+<body>
+    <%- include("nav.ejs", {}) %>
+        <div class="image-container">
+            <div class="page-one">
+                <h1>👨‍👩‍👧‍👧FAMILY</h1>
+            </div>
+            <div class="pageblock">
+                <img src="images/4.JPG" data-info="05/10/2024-Seattle-All camera on her!">
+            </div>
+            <div class="pageblock">
+                <img src="images/14.JPG" data-info="12-24-2023-Seattle-Christmas dinner">
+            </div>
+            <div class="pageblock">
+                <img src="images/35.JPG" data-info="08-01-2023-Shandong-Back to my childhood home">
+            </div>
+            <div class="pageblock">
+                <img src="images/36.png" data-info="07-08-2024-Puyallup-Photographers!">
+            </div>
+            <div class="pageblock">
+                <img src="images/37.jpeg" data-info="06/20/2024-Oakesdale-Why the wind is so strong?">
+            </div>
+            <div class="pageblock">
+                <img src="images/38.JPG" data-info="07-02-2022-San Diego-Our favorite pose for photo!">
+            </div>
+            <div class="pageblock">
+                <img src="images/39.jpeg" data-info="02/18/2023-Hawaii-Hold hands!">
+            </div>
+            <div class="pageblock">
+                <img src="images/41.jpeg" data-info="02/21/2023-Hawaii-Wind..and us">
+            </div>
+            <div class="pageblock">
+                <img src="images/42.jpeg" data-info="07/18/2024-Nanaimo-Photographer again!">
+            </div>
+            <div class="pageblock">
+                <img src="images/blank.jpg" data-info="Coming Soon">
+            </div>
+            <div class="pageblock">
+                <img src="images/blank.jpg" data-info="Coming Soon!">
+            </div>
+            <div class="information">
+            </div>
+
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const images = document.querySelectorAll('.pageblock img');
+                const infoBlock = document.querySelector('.information');
+
+                images.forEach(image => {
+                    image.addEventListener('click', function () {
+                        // Update the information block with the data attribute
+                        infoBlock.textContent = image.getAttribute('data-info');
+                    });
+                });
+            });
+        </script>
+</body>
+
+</html>

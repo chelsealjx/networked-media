@@ -1,0 +1,70 @@
+<html>
+
+<head>
+    <title>FRIENDS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pages.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+
+<body>
+    <%- include("nav.ejs", {}) %>
+        <div class="image-container">
+            <div class="page-one">
+                <h1>👭🏻FRIENDS</h1>
+            </div>
+            <div class="pageblock">
+                <img src="images/6.JPG"
+                    data-info="06/13/2024-Seattle-Holding all the flowers but you are not the graduate..">
+            </div>
+            <div class="pageblock">
+                <img src="images/51.jpeg" data-info="2016(?)-Beijing-so much memory...">
+            </div>
+            <div class="pageblock">
+                <img src="images/52.jpg" data-info="07/12/2022-Los Angeles-UCLA Summer Camp roomies and buddies">
+            </div>
+            <div class="pageblock">
+                <img src="images/11.JPG" data-info="08/17/2024-Somerset-Not day 1 but BEST 1 (INFJ vs.INTJ)">
+            </div>
+            <div class="pageblock">
+                <img src="images/17.jpg" data-info="10/15/2024-New York-Online friend finally meet in US!">
+            </div>
+            <div class="pageblock">
+                <img src="images/21.JPG" data-info="03/16/2024-New York-15 years later..we all end up in NYC!">
+            </div>
+            <div class="pageblock">
+                <img src="images/23.JPG" data-info="06/13/2023-Newcastle-1st and LAST Prom!">
+            </div>
+            <div class="pageblock">
+                <img src="images/53.JPG" data-info="04/07/2024-New York-Workout date w/Sunny">
+            </div>
+            <div class="pageblock">
+                <img src="images/56.JPG" data-info="06/13/2024-Seattle-One of my day 1 graduated from high school!">
+            </div>
+            <div class="pageblock">
+                <img src="images/54.JPG" data-info="04/17/2022-Newport High School-Matching hoodie with Michelle">
+            </div>
+            <div class="pageblock">
+                <img src="images/55.JPG"
+                    data-info="09/21/2019-Newport High School-1st high school Homecoming dance w/Harry Potter theme">
+            </div>
+            <div class="information">
+            </div>
+
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const images = document.querySelectorAll('.pageblock img');
+                const infoBlock = document.querySelector('.information');
+
+                images.forEach(image => {
+                    image.addEventListener('click', function () {
+                        // Update the information block with the data attribute
+                        infoBlock.textContent = image.getAttribute('data-info');
+                    });
+                });
+            });
+        </script>
+</body>
+
+</html>

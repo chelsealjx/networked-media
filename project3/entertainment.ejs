@@ -1,0 +1,68 @@
+<html>
+
+<head>
+    <title>ENTERTAINMENT</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pages.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+
+<body>
+    <%- include("nav.ejs", {}) %>
+        <div class="image-container">
+            <div class="page-one">
+                <h1>🎶ENTERTAINMENT</h1>
+            </div>
+            <div class="pageblock">
+                <img src="images/19.JPG" data-info="02/17/2023-Hawaii-Family trip!">
+            </div>
+            <div class="pageblock">
+                <img src="images/27.JPG" data-info="07/09/2023-Qingdao-1st Concert of my favorite singer!">
+            </div>
+            <div class="pageblock">
+                <img src="images/18.JPG" data-info="02/17/204-New York-2nd concert of my favorite singer in New York!">
+            </div>
+            <div class="pageblock">
+                <img src="images/20.JPG"
+                    data-info="03/04/2024-San Jose-Spend my 19th birthday with my favorite singer! (thrid time!)">
+            </div>
+            <div class="pageblock">
+                <img src="images/33.JPG" data-info="06/25/23-Shanghai-Visit Zhujiajiao with my cousin">
+            </div>
+            <div class="pageblock">
+                <img src="images/34.JPG" data-info="07/18/2024-Nanaimo-Found a vintage cafe place!">
+            </div>
+            <div class="pageblock">
+                <img src="images/28.JPG" data-info="07/17/2024-Nanaimo-Best sunset ever!">
+            </div>
+            <div class="pageblock">
+                <img src="images/29.jpg" data-info="06/20-2024-Oaksdale-Wheatland & Sunset & ME!">
+            </div>
+            <div class="pageblock">
+                <img src="images/30.JPG" data-info="07/06/2022-San Diego-Sunset,palm tree, and conversation">
+            </div>
+            <div class="pageblock">
+                <img src="images/31.jpeg" data-info="06/08/2024-Puyallup-Lupins garden">
+            </div>
+            <div class="pageblock">
+                <img src="images/32.jpg" data-info="06/23/2023-Shanghai-1st time seeing The Bund,impressive!">
+            </div>
+            <div class="information">
+            </div>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const images = document.querySelectorAll('.pageblock img');
+                const infoBlock = document.querySelector('.information');
+
+                images.forEach(image => {
+                    image.addEventListener('click', function () {
+                        // Update the information block with the data attribute
+                        infoBlock.textContent = image.getAttribute('data-info');
+                    });
+                });
+            });
+        </script>
+</body>
+
+</html>

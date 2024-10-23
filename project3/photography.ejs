@@ -1,0 +1,68 @@
+<html>
+
+<head>
+    <title>PHOTOGRAPHY</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pages.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+
+<body>
+    <%- include("nav.ejs", {}) %>
+        <div class="image-container">
+            <div class="page-one">
+                <h1>📸PHOTOGRAPHY</h1>
+            </div>
+            <div class="pageblock">
+                <img src="images/p1.JPG" data-info="07/04/2024-Sammamish-July 4th Firework">
+            </div>
+            <div class="pageblock">
+                <img src="images/p2.JPG" data-info="08/19/2024-Seattle-Flowers & Roads">
+            </div>
+            <div class="pageblock">
+                <img src="images/p3.JPG" data-info="04/12/2023-Seattle-UW Cherry Blossoms">
+            </div>
+            <div class="pageblock">
+                <img src="images/p4.JPG" data-info="08/28/2023-New York-Lights">
+            </div>
+            <div class="pageblock">
+                <img src="images/p5.JPG" data-info="04/03/2024-New York-Central Park Cherry Blossoms">
+            </div>
+            <div class="pageblock">
+                <img src="images/p6.jpg" data-info="05/06/2024-Seattle-Lake/Roads">
+            </div>
+            <div class="pageblock">
+                <img src="images/p7.jpg" data-info="05/27/2024-Seattle-Mt.Rainier">
+            </div>
+            <div class="pageblock">
+                <img src="images/p8.JPG" data-info="06/08/2024-Puyallup-Sunset/Lupins">
+            </div>
+            <div class="pageblock">
+                <img src="images/p9.JPG" data-info="06/20/2024-Moses Lake-Tornado">
+            </div>
+            <div class="pageblock">
+                <img src="images/p10.JPG" data-info="03/04/2024-San Jose-B&W:Him and Music">
+            </div>
+            <div class="pageblock">
+                <img src="images/p11.JPG" data-info="02/17/2024-New York-If Everything Was Dark">
+            </div>
+            <div class="information">
+            </div>
+
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const images = document.querySelectorAll('.pageblock img');
+                const infoBlock = document.querySelector('.information');
+
+                images.forEach(image => {
+                    image.addEventListener('click', function () {
+                        // Update the information block with the data attribute
+                        infoBlock.textContent = image.getAttribute('data-info');
+                    });
+                });
+            });
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <title>ABOUT</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pages.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+
+<body>
+    <style>
+        p {
+            font-size: 25px;
+            text-align: left;
+            margin: 10px;
+        }
+    </style>
+    <%- include("nav.ejs", {}) %>
+        <div class="image-container">
+            <div class="page-one">
+                <h1>📝ABOUT</h1>
+            </div>
+            <div class="about-site">
+                <h2>ABOUT THE CREATOR</h2>
+                <p>Hi, I am Chelsea, A current undergraduate in Interactive Media Arts at New York University. As a
+                    multidisciplinary artist, I utilize my fine arts and digital arts skills to create works that show
+                    my identity. Recently, I have become passionate about photography and working to incorporate both
+                    photography and digital arts into interactive works.​​​​​​​</p>
+                <a href="https://chelsealjx.myportfolio.com">Learn more-></a>
+                <div class="about-site-subtitle">
+                </div>
+            </div>
+            <div class="about-creator">
+                <h2>ABOUT THIS SITE</h2>
+                <p>This was a website showcase all of the meaningful events about me in a gallery form. The concept was
+                    inspired by instagram story archive function. The website currently display all of the events the
+                    creator personally think was important or memorable. You can also navigate to the "submit" tab to
+                    submit your own memorable events to share with the viewer of this website. </p>
+            </div>
+        </div>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const images = document.querySelectorAll('.pageblock img');
+                const infoBlock = document.querySelector('.information');
+
+                images.forEach(image => {
+                    image.addEventListener('click', function () {
+                        // Update the information block with the data attribute
+                        infoBlock.textContent = image.getAttribute('data-info');
+                    });
+                });
+            });
+        </script>
+</body>
+
+</html>
