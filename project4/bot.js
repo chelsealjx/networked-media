@@ -26,7 +26,7 @@ let emojis = ["💜!", "📸!", "🐨", "🐥", "🌿", "🌼", "🌒", "☁️"
 function multipleStatuses() {
     let randEmojis = Math.floor(Math.random() * emojis.length)
     let randQuestions = Math.floor(Math.random() * questions.length)
-    let mention = "@garnetwen"
+    let mention = "@yt2694"
     let post = `${mention} ${questions[randQuestions]}! ${emojis[randEmojis]}`
 
 
