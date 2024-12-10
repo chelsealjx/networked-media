@@ -1,0 +1,289 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Cagliostro", sans-serif;
+    overflow: hidden;
+}
+
+.cagliostro-regular {
+    font-family: "Cagliostro", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+}
+
+p {
+    margin-bottom: 5px;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/*containers*/
+.homeContainer,
+.selectContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.homeContainer h1 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 90px;
+    padding-top: 10px;
+}
+
+.homeContainer p {
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+.mainContainer {
+    border: solid 5px #987554;
+    width: 100vw;
+    height: 100vh;
+    margin: 0 0;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.navContainer {
+    background-color: #987554;
+    font-size: 20px;
+    width: 100%;
+    height: 5vh;
+    margin: 0;
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-self: top;
+}
+
+.navContainer a {
+    text-decoration: none;
+    padding: 10px 20px;
+    color: white;
+    position: relative;
+    display: inline-block;
+}
+
+.navContainer a :active {
+    background-color: white;
+}
+
+
+.navContainer a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.blockContainer {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 5px;
+    width: 80vw;
+    height: 90vh;
+    margin: 8vh 0 0 2vh;
+}
+
+.inputContainer {
+    width: 20vw;
+    height: 90%;
+    margin: 8vh 0 0 2vh;
+    padding: 20px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 0.8)
+}
+
+.inputContainer p {
+    font-size: 23px;
+}
+
+.moodContainer p {
+    margin-top: 5px;
+}
+
+.selectContainer {
+    position: relative;
+    width: 80vw;
+    margin: 20px auto;
+    color: white;
+}
+
+/*texts*/
+.description {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 5px solid #987554;
+    border-radius: 5px;
+    height: 45vh;
+    width: 70vw;
+    margin: 0px auto 10px auto;
+}
+
+.description p {
+    text-align: left;
+    color: #987554;
+    font-size: 25px;
+    margin: 20px 15px;
+}
+
+#output {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 25px;
+    margin-top: 10px;
+    color: black;
+}
+
+label {
+    display: block;
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+/*block*/
+.block {
+    background-color: #ffffff;
+    width: 100%;
+    padding-top: 100%;
+    border-radius: 2px;
+}
+
+/*buttons*/
+.loginBtn,
+.startBtn,
+.submitBtn,
+.clearBtn {
+    outline: none;
+    background-color: #ffffff;
+    color: #987554;
+    border: none;
+    width: 400px;
+    padding: 20px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.loginBtn:hover,
+.startBtn:hover,
+.submitBtn:hover,
+.clearBtn:hover {
+    outline: none;
+    background-color: #bc9067;
+    color: #ffffff;
+}
+
+.loginBtn:active,
+.startBtn:active,
+.submitBtn:active,
+.clearBtn:active {
+    outline: none;
+    background-color: #987554;
+    color: #ffffff;
+}
+
+.submitBtn,
+.clearBtn {
+    width: 95%;
+    height: 40px;
+    padding: 20px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.moodBtn {
+    width: 95%;
+}
+
+.moodBtn button {
+    border: none;
+    color: white;
+    padding: 10px 8px;
+    margin: 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    justify-content: start;
+}
+
+.moodBtn button:hover {
+    opacity: 0.8;
+}
+
+.moodBtn button:active {
+    opacity: 0.5;
+}
+
+.redBtn {
+    background-color: #FF4C4C;
+}
+
+.orangeBtn {
+    background-color: #FFA500;
+}
+
+.yellowBtn {
+    background-color: #FFD700;
+}
+
+.greenBtn {
+    background-color: #32CD32;
+}
+
+.blueBtn {
+    background-color: #1E90FF;
+}
+
+.purpleBtn {
+    background-color: #9370DB;
+}
+
+.blackBtn {
+    background-color: #2F2F2F;
+}
+
+/*slider*/
+.saturationSlider {
+    width: 95%;
+    height: 5vh;
+}
+
+/*selector*/
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1 px solid #cccccc;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 20px;
+    color: black;
+    height: 10vh;
+    font-size: 25px;
+    text-align: center;
+}

@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <title>Tips</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cagliostro&family=Edu+AU+VIC+WA+NT+Dots:wght@400..700&family=Kode+Mono:wght@400..700&family=Major+Mono+Display&family=Parkinsans:wght@300..800&display=swap"
+        rel="stylesheet">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <style>
+        body {
+            background-image: url("/images/background.jpeg");
+            background-color: rgba(0, 0, 0, 0.2);
+            background-blend-mode: multiply;
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mainContainer">
+        <div class="navContainer">
+            <a href="/">Home</a>
+            <a href="/record">Record</a>
+            <a href="/help">Tips</a>
+        </div>
+        <div class="selectContainer">
+            <label for="options">Which Color Shows Up the MOST?</label>
+            <select id="options">
+                <option value="angry">Red</option>
+                <option value="energized">Orange</option>
+                <option value="happy">Yellow</option>
+                <option value="calm">Green</option>
+                <option value="compassion">Turquoise</option>
+                <option value="sad">Blue</option>
+                <option value="creative">Purple</option>
+                <option value="romance">Pink</option>
+                <option value="wistful">Brown</option>
+                <option value="stressed">Grey</option>
+            </select>
+            <button class="submitBtn" style="height: 80px; width:100%; font-size:25px;margin-bottom:20px;">Get
+                Tips</button>
+            <p id="output" class="output">
+        </div>
+    </div>
+</body>
+
+</html>
