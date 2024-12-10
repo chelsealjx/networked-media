@@ -239,34 +239,6 @@ label {
     opacity: 0.5;
 }
 
-.redBtn {
-    background-color: #FF4C4C;
-}
-
-.orangeBtn {
-    background-color: #FFA500;
-}
-
-.yellowBtn {
-    background-color: #FFD700;
-}
-
-.greenBtn {
-    background-color: #32CD32;
-}
-
-.blueBtn {
-    background-color: #1E90FF;
-}
-
-.purpleBtn {
-    background-color: #9370DB;
-}
-
-.blackBtn {
-    background-color: #2F2F2F;
-}
-
 /*slider*/
 .saturationSlider {
     width: 95%;
