@@ -1,3 +1,4 @@
+//record page
 $(document).ready(function () {
     // Initial mood hues
     const moodHues = {
